@@ -1,0 +1,41 @@
+/* Empty. Add your own CSS if you like */
+
+ion-content{
+	background-color:#009688;
+}
+
+.item {
+	background-color:#009688;
+	border-color: #009688 !important; 
+}
+
+.item .item{
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	border-radius: 10px;
+	border-color: #009688 !important;
+	background-color: #009688 ;
+	color: white;
+}
+
+.item-radio input:checked ~ .item-content  {
+	background-color: #5c6bc0 ;
+	color: white;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	border-radius: 10px;
+	border-color: #5c6bc0 !important;
+}
+
+.item-radio .item-content {
+	background-color: 	#e3f2fd;
+	border-radius: 10px;
+	color: black;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-ms-border-radius: 10px;
+	border-radius: 10px;
+	border-color: 	#e3f2fd !important;
+}

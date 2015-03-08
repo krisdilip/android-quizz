@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+		<title></title>
+
+		<link href="lib/ionic/css/ionic.css" rel="stylesheet">
+		<link href="css/style.css" rel="stylesheet">
+
+		<!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+		<link href="css/ionic.app.css" rel="stylesheet">
+		-->
+
+		<!-- ionic/angularjs js -->
+		<script src="lib/ionic/js/ionic.bundle.js"></script>
+
+		<!-- cordova script (this will be a 404 during development) -->
+		<script src="cordova.js"></script>
+
+		<!-- your app's js -->
+		<script src="js/question.js"></script>
+		<script src="js/app.js"></script>
+	</head>
+<body ng-app="quiz" ng-controller="IndexCtrl">
+	<ion-pane>
+		<ion-pane>
+			<ion-side-menus>
+				<ion-side-menu-content>
+					<!-- Page Header -->
+					<ion-header-bar class="bar-dark">
+						<button class="button icon button-clear ion-navicon-round" ng-click="toggleLeft()"></button>
+						<h1 class="title">Quiz [{{CurrQuestion}} of {{QuizQuestions}}]</h1>
+						<button class="button button-clear icon ion-ios7-home" ng-click="fnFirst()"></button>
+					</ion-header-bar>
+					
+					<!-- Place holder for partials -->
+					<div ui-view></div>
+					
+				</ion-side-menu-content>
+				<ion-side-menu side="left">					
+					<!-- Side menu header -->
+					<header class="bar bar-header bar-dark">
+						<h1 class="title">Topics</h1>
+					</header>
+					
+					<!-- Side menu contents -->
+					<ion-content class="has-header">
+						<ion-list><ion-item nav-clear menu-close ng-repeat="topic in topicList" href="{{topic.href}}">
+							{{topic.topic}}
+							</ion-item>
+						</ion-list>						
+					</ion-content>
+			</ion-side-menu>
+		</ion-side-menus>
+
+		<!-- Footer buttons 
+		<ion-footer-bar align-title="left" class="bar-stable">
+			<div class="button-bar">
+			  <button class="button button-clear icon-left ion-ios7-arrow-back" ng-click="fnPrevious()">Previous</button>
+			  <button class="button button-clear icon ion-ios7-home" ng-click="fnFirst()"></button>
+			  <button class="button button-clear icon-right ion-ios7-arrow-forward" ng-click="fnNext()">Next</button>
+			</div>
+		</ion-footer-bar>
+		-->
+	</ion-pane>
+  </body>
+</html>

@@ -1,0 +1,10 @@
+Description
+Quizz is a multiple choice free general knowledge quiz app with the following features:
+★ 300 questions
+★ 3 topics to choose from
+  ★ Inventions
+  ★ World Geography
+  ★ Basic General Knowledge
+★ offline playable
+
+If you like our game, rate us on Google Play Store!

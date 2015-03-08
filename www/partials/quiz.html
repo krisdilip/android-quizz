@@ -1,0 +1,10 @@
+<ion-content>
+	<div class="item">
+		<div class="item item-text-wrap">
+			{{data.quiz.question}}
+		</div>
+	</div>
+	<div class="item">
+		<ion-radio class="item item-text-wrap" ng-repeat="ans in data.quiz.answers" ng-model="data.choice" ng-value="$index" icon="ion-ios7-close-outline" ng-change="fnNextQuestion()">{{ ans }}</ion-radio>
+	</div>
+</ion-content>
